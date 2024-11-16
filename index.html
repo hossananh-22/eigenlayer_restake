@@ -1,0 +1,2311 @@
+<!DOCTYPE html>
+<html lang="en" style="" data-scrapbook-source="https://app.eigenlayer.xyz/" data-scrapbook-create="20241114152529809"
+  data-scrapbook-adoptedstylesheet-0=":host { z-index: var(--w3m-z-index); display: block; backface-visibility: hidden; position: fixed; inset: 0px; pointer-events: none; opacity: 0; background-color: var(--wui-cover); transition: opacity 0.2s var(--wui-ease-out-power-2); will-change: opacity; }
+
+:host(.open) { opacity: 1; }
+
+@keyframes zoom-in {
+  0% { transform: scale(0.95) translateY(0px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+@keyframes slide-in {
+  0% { transform: scale(1) translateY(50px); }
+  100% { transform: scale(1) translateY(0px); }
+}
+
+wui-card { max-width: var(--w3m-modal-width); width: 100%; position: relative; animation-duration: 0.2s; animation-name: zoom-in; animation-fill-mode: backwards; animation-timing-function: var(--wui-ease-out-power-2); outline: none; }
+
+wui-flex { overflow: hidden auto; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+
+@media (max-height: 700px) and (min-width: 431px) {
+  wui-flex { align-items: flex-start; }
+  wui-card { margin: var(--wui-spacing-xxl) 0px; }
+}
+
+@media (max-width: 430px) {
+  wui-flex { align-items: flex-end; }
+  wui-card { max-width: 100%; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; border-bottom: none; animation-name: slide-in; }
+}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="a18f76d07b77fc12.css" data-precedence="next">
+  <link rel="stylesheet" href="40e1a773bae6aaa0.css" data-precedence="next">
+  <link rel="stylesheet" href="123a38f634a7f541.css" data-precedence="next">
+  <link rel="stylesheet" href="1ab910755375b28c.css" data-precedence="next">
+  <link rel="stylesheet" href="cb8e08fc5ea69eca.css" data-precedence="next">
+  <link rel="stylesheet" href="4bd977420bd561f0.css" data-precedence="next">
+  <title>Eigenlayer App</title>
+  <meta name="description" content="Eigenlayer App">
+  <meta name="next-size-adjust">
+  <style id="_goober">
+    @keyframes go2264125279 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go3020080000 {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go463499852 {
+      from {
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(90deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go1268368563 {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes go1310225428 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go651618207 {
+      0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+
+      40% {
+        height: 0;
+        width: 6px;
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 1;
+        height: 10px;
+      }
+    }
+
+    @keyframes go901347462 {
+      from {
+        transform: scale(0.6);
+        opacity: 0.4;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .go4109123758 {
+      z-index: 9999;
+    }
+
+    .go4109123758>* {
+      pointer-events: auto;
+    }
+  </style>
+  <style>
+    @import url("css2.css");
+
+    :root {
+      --w3m-modal-width: 360px;
+      --w3m-color-mix-strength: 20%;
+      --w3m-font-family: '__ABCRepro_74267a', '__ABCRepro_Fallback_74267a';
+      --w3m-font-size-master: 10px;
+      --w3m-border-radius-master: 4px;
+      --w3m-z-index: 999;
+
+      --wui-font-family: var(--w3m-font-family);
+
+      --wui-font-size-mini: calc(var(--w3m-font-size-master) * 0.8);
+      --wui-font-size-micro: var(--w3m-font-size-master);
+      --wui-font-size-tiny: calc(var(--w3m-font-size-master) * 1.2);
+      --wui-font-size-small: calc(var(--w3m-font-size-master) * 1.4);
+      --wui-font-size-paragraph: calc(var(--w3m-font-size-master) * 1.6);
+      --wui-font-size-medium: calc(var(--w3m-font-size-master) * 1.8);
+      --wui-font-size-large: calc(var(--w3m-font-size-master) * 2);
+      --wui-font-size-medium-title: calc(var(--w3m-font-size-master) * 2.4);
+      --wui-font-size-2xl: calc(var(--w3m-font-size-master) * 4);
+
+      --wui-border-radius-5xs: var(--w3m-border-radius-master);
+      --wui-border-radius-4xs: calc(var(--w3m-border-radius-master) * 1.5);
+      --wui-border-radius-3xs: calc(var(--w3m-border-radius-master) * 2);
+      --wui-border-radius-xxs: calc(var(--w3m-border-radius-master) * 3);
+      --wui-border-radius-xs: calc(var(--w3m-border-radius-master) * 4);
+      --wui-border-radius-s: calc(var(--w3m-border-radius-master) * 5);
+      --wui-border-radius-m: calc(var(--w3m-border-radius-master) * 7);
+      --wui-border-radius-l: calc(var(--w3m-border-radius-master) * 9);
+      --wui-border-radius-3xl: calc(var(--w3m-border-radius-master) * 20);
+
+      --wui-font-weight-light: 400;
+      --wui-font-weight-regular: 500;
+      --wui-font-weight-medium: 600;
+      --wui-font-weight-bold: 700;
+
+      --wui-letter-spacing-2xl: -1.6px;
+      --wui-letter-spacing-medium-title: -0.96px;
+      --wui-letter-spacing-large: -0.8px;
+      --wui-letter-spacing-medium: -0.72px;
+      --wui-letter-spacing-paragraph: -0.64px;
+      --wui-letter-spacing-small: -0.56px;
+      --wui-letter-spacing-tiny: -0.48px;
+      --wui-letter-spacing-micro: -0.2px;
+      --wui-letter-spacing-mini: -0.16px;
+
+      --wui-spacing-0: 0px;
+      --wui-spacing-4xs: 2px;
+      --wui-spacing-3xs: 4px;
+      --wui-spacing-xxs: 6px;
+      --wui-spacing-2xs: 7px;
+      --wui-spacing-xs: 8px;
+      --wui-spacing-1xs: 10px;
+      --wui-spacing-s: 12px;
+      --wui-spacing-m: 14px;
+      --wui-spacing-l: 16px;
+      --wui-spacing-2l: 18px;
+      --wui-spacing-xl: 20px;
+      --wui-spacing-xxl: 24px;
+      --wui-spacing-2xl: 32px;
+      --wui-spacing-3xl: 40px;
+      --wui-spacing-4xl: 90px;
+
+      --wui-icon-box-size-xxs: 14px;
+      --wui-icon-box-size-xs: 20px;
+      --wui-icon-box-size-sm: 24px;
+      --wui-icon-box-size-md: 32px;
+      --wui-icon-box-size-lg: 40px;
+      --wui-icon-box-size-xl: 64px;
+
+      --wui-icon-size-inherit: inherit;
+      --wui-icon-size-xxs: 10px;
+      --wui-icon-size-xs: 12px;
+      --wui-icon-size-sm: 14px;
+      --wui-icon-size-md: 16px;
+      --wui-icon-size-mdl: 18px;
+      --wui-icon-size-lg: 20px;
+      --wui-icon-size-xl: 24px;
+
+      --wui-wallet-image-size-inherit: inherit;
+      --wui-wallet-image-size-sm: 40px;
+      --wui-wallet-image-size-md: 56px;
+      --wui-wallet-image-size-lg: 80px;
+
+      --wui-visual-size-size-inherit: inherit;
+      --wui-visual-size-sm: 40px;
+      --wui-visual-size-md: 55px;
+      --wui-visual-size-lg: 80px;
+
+      --wui-box-size-md: 100px;
+      --wui-box-size-lg: 120px;
+
+      --wui-ease-out-power-2: cubic-bezier(0, 0, 0.22, 1);
+      --wui-ease-out-power-1: cubic-bezier(0, 0, 0.55, 1);
+
+      --wui-ease-in-power-3: cubic-bezier(0.66, 0, 1, 1);
+      --wui-ease-in-power-2: cubic-bezier(0.45, 0, 1, 1);
+      --wui-ease-in-power-1: cubic-bezier(0.3, 0, 1, 1);
+
+      --wui-ease-inout-power-1: cubic-bezier(0.45, 0, 0.55, 1);
+
+      --wui-duration-lg: 200ms;
+      --wui-duration-md: 125ms;
+      --wui-duration-sm: 75ms;
+
+      --wui-path-network-sm: path('M15.4 2.1a5.21 5.21 0 0 1 5.2 0l11.61 6.7a5.21 5.21 0 0 1 2.61 4.52v13.4c0 1.87-1 3.59-2.6 4.52l-11.61 6.7c-1.62.93-3.6.93-5.22 0l-11.6-6.7a5.21 5.21 0 0 1-2.61-4.51v-13.4c0-1.87 1-3.6 2.6-4.52L15.4 2.1Z'
+        );
+
+      --wui-path-network-md: path('M43.4605 10.7248L28.0485 1.61089C25.5438 0.129705 22.4562 0.129705 19.9515 1.61088L4.53951 10.7248C2.03626 12.2051 0.5 14.9365 0.5 17.886V36.1139C0.5 39.0635 2.03626 41.7949 4.53951 43.2752L19.9515 52.3891C22.4562 53.8703 25.5438 53.8703 28.0485 52.3891L43.4605 43.2752C45.9637 41.7949 47.5 39.0635 47.5 36.114V17.8861C47.5 14.9365 45.9637 12.2051 43.4605 10.7248Z'
+        );
+
+      --wui-path-network-lg: path('M78.3244 18.926L50.1808 2.45078C45.7376 -0.150261 40.2624 -0.150262 35.8192 2.45078L7.6756 18.926C3.23322 21.5266 0.5 26.3301 0.5 31.5248V64.4752C0.5 69.6699 3.23322 74.4734 7.6756 77.074L35.8192 93.5492C40.2624 96.1503 45.7376 96.1503 50.1808 93.5492L78.3244 77.074C82.7668 74.4734 85.5 69.6699 85.5 64.4752V31.5248C85.5 26.3301 82.7668 21.5266 78.3244 18.926Z'
+        );
+
+      --wui-width-network-sm: 36px;
+      --wui-width-network-md: 48px;
+      --wui-width-network-lg: 86px;
+
+      --wui-height-network-sm: 40px;
+      --wui-height-network-md: 54px;
+      --wui-height-network-lg: 96px;
+
+      --wui-icon-size-network-xs: 12px;
+      --wui-icon-size-network-sm: 16px;
+      --wui-icon-size-network-md: 24px;
+      --wui-icon-size-network-lg: 42px;
+
+      --wui-color-inherit: inherit;
+
+      --wui-color-inverse-100: #fff;
+      --wui-color-inverse-000: #000;
+
+      --wui-cover: rgba(20, 20, 20, 0.8);
+
+      --wui-color-modal-bg: var(--wui-color-modal-bg-base);
+
+      --wui-color-accent-100: var(--wui-color-accent-base-100);
+      --wui-color-accent-090: var(--wui-color-accent-base-090);
+      --wui-color-accent-080: var(--wui-color-accent-base-080);
+
+      --wui-accent-glass-090: var(--wui-accent-glass-base-090);
+      --wui-accent-glass-080: var(--wui-accent-glass-base-080);
+      --wui-accent-glass-020: var(--wui-accent-glass-base-020);
+      --wui-accent-glass-015: var(--wui-accent-glass-base-015);
+      --wui-accent-glass-010: var(--wui-accent-glass-base-010);
+      --wui-accent-glass-005: var(--wui-accent-glass-base-005);
+      --wui-accent-glass-002: var(--wui-accent-glass-base-002);
+
+      --wui-color-fg-100: var(--wui-color-fg-base-100);
+      --wui-color-fg-125: var(--wui-color-fg-base-125);
+      --wui-color-fg-150: var(--wui-color-fg-base-150);
+      --wui-color-fg-175: var(--wui-color-fg-base-175);
+      --wui-color-fg-200: var(--wui-color-fg-base-200);
+      --wui-color-fg-225: var(--wui-color-fg-base-225);
+      --wui-color-fg-250: var(--wui-color-fg-base-250);
+      --wui-color-fg-275: var(--wui-color-fg-base-275);
+      --wui-color-fg-300: var(--wui-color-fg-base-300);
+
+      --wui-color-bg-100: var(--wui-color-bg-base-100);
+      --wui-color-bg-125: var(--wui-color-bg-base-125);
+      --wui-color-bg-150: var(--wui-color-bg-base-150);
+      --wui-color-bg-175: var(--wui-color-bg-base-175);
+      --wui-color-bg-200: var(--wui-color-bg-base-200);
+      --wui-color-bg-225: var(--wui-color-bg-base-225);
+      --wui-color-bg-250: var(--wui-color-bg-base-250);
+      --wui-color-bg-275: var(--wui-color-bg-base-275);
+      --wui-color-bg-300: var(--wui-color-bg-base-300);
+
+      --wui-color-success-100: var(--wui-color-success-base-100);
+      --wui-color-error-100: var(--wui-color-error-base-100);
+
+      --wui-icon-box-bg-error-100: var(--wui-icon-box-bg-error-base-100);
+      --wui-icon-box-bg-blue-100: var(--wui-icon-box-bg-blue-base-100);
+      --wui-icon-box-bg-success-100: var(--wui-icon-box-bg-success-base-100);
+      --wui-icon-box-bg-inverse-100: var(--wui-icon-box-bg-inverse-base-100);
+
+      --wui-all-wallets-bg-100: var(--wui-all-wallets-bg-base-100);
+
+      --wui-avatar-border: var(--wui-avatar-border-base);
+
+      --wui-thumbnail-border: var(--wui-thumbnail-border-base);
+
+      --wui-box-shadow-blue: rgba(71, 161, 255, 0.16);
+    }
+
+    @supports (background: color-mix(in srgb, white 50%, black)) {
+      :root {
+        --wui-color-modal-bg: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-modal-bg-base));
+
+        --wui-box-shadow-blue: color-mix(in srgb, var(--wui-color-accent-100) 16%, transparent);
+
+        --wui-color-accent-090: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            var(--w3m-default));
+        --wui-color-accent-080: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            var(--w3m-default));
+
+        --wui-color-accent-090: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent);
+        --wui-color-accent-080: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent);
+
+        --wui-accent-glass-090: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 90%,
+            transparent);
+        --wui-accent-glass-080: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 80%,
+            transparent);
+        --wui-accent-glass-020: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 20%,
+            transparent);
+        --wui-accent-glass-015: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 15%,
+            transparent);
+        --wui-accent-glass-010: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 10%,
+            transparent);
+        --wui-accent-glass-005: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 5%,
+            transparent);
+        --wui-color-accent-002: color-mix(in srgb,
+            var(--wui-color-accent-base-100) 2%,
+            transparent);
+
+        --wui-color-fg-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-100));
+        --wui-color-fg-125: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-125));
+        --wui-color-fg-150: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-150));
+        --wui-color-fg-175: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-175));
+        --wui-color-fg-200: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-200));
+        --wui-color-fg-225: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-225));
+        --wui-color-fg-250: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-250));
+        --wui-color-fg-275: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-275));
+        --wui-color-fg-300: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-fg-base-300));
+
+        --wui-color-bg-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-100));
+        --wui-color-bg-125: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-125));
+        --wui-color-bg-150: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-150));
+        --wui-color-bg-175: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-175));
+        --wui-color-bg-200: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-200));
+        --wui-color-bg-225: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-225));
+        --wui-color-bg-250: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-250));
+        --wui-color-bg-275: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-275));
+        --wui-color-bg-300: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-bg-base-300));
+
+        --wui-color-success-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-success-base-100));
+        --wui-color-error-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-color-error-base-100));
+
+        --wui-icon-box-bg-error-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-error-base-100));
+        --wui-icon-box-bg-accent-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-blue-base-100));
+        --wui-icon-box-bg-success-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-success-base-100));
+        --wui-icon-box-bg-inverse-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-icon-box-bg-inverse-base-100));
+
+        --wui-all-wallets-bg-100: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-all-wallets-bg-base-100));
+
+        --wui-avatar-border: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-avatar-border-base));
+
+        --wui-thumbnail-border: color-mix(in srgb,
+            var(--w3m-color-mix) var(--w3m-color-mix-strength),
+            var(--wui-thumbnail-border-base));
+      }
+    }
+  </style>
+  <style>
+    :root {
+      --w3m-color-mix: rgb(233, 242, 255);
+      --w3m-accent: #5773ff;
+      --w3m-default: #000;
+
+      --wui-color-modal-bg-base: #fff;
+      --wui-color-accent-base-100: var(--w3m-accent);
+
+      --wui-accent-glass-base-090: rgba(51, 150, 255, 0.9);
+      --wui-accent-glass-base-080: rgba(51, 150, 255, 0.8);
+      --wui-accent-glass-base-020: rgba(51, 150, 255, 0.2);
+      --wui-accent-glass-base-015: rgba(51, 150, 255, 0.15);
+      --wui-accent-glass-base-010: rgba(51, 150, 255, 0.1);
+      --wui-accent-glass-base-005: rgba(51, 150, 255, 0.05);
+      --wui-accent-glass-base-002: rgba(51, 150, 255, 0.02);
+
+      --wui-color-fg-base-100: #141414;
+      --wui-color-fg-base-125: #2d3131;
+      --wui-color-fg-base-150: #474d4d;
+      --wui-color-fg-base-175: #636d6d;
+      --wui-color-fg-base-200: #798686;
+      --wui-color-fg-base-225: #828f8f;
+      --wui-color-fg-base-250: #8b9797;
+      --wui-color-fg-base-275: #95a0a0;
+      --wui-color-fg-base-300: #9ea9a9;
+
+      --wui-color-bg-base-100: #ffffff;
+      --wui-color-bg-base-125: #f5fafa;
+      --wui-color-bg-base-150: #f3f8f8;
+      --wui-color-bg-base-175: #eef4f4;
+      --wui-color-bg-base-200: #eaf1f1;
+      --wui-color-bg-base-225: #e5eded;
+      --wui-color-bg-base-250: #e1e9e9;
+      --wui-color-bg-base-275: #dce7e7;
+      --wui-color-bg-base-300: #d8e3e3;
+
+      --wui-color-success-base-100: #26b562;
+      --wui-color-error-base-100: #f05142;
+
+      --wui-success-glass-001: rgba(38, 181, 98, 0.01);
+      --wui-success-glass-002: rgba(38, 181, 98, 0.02);
+      --wui-success-glass-005: rgba(38, 181, 98, 0.05);
+      --wui-success-glass-010: rgba(38, 181, 98, 0.1);
+      --wui-success-glass-015: rgba(38, 181, 98, 0.15);
+      --wui-success-glass-020: rgba(38, 181, 98, 0.2);
+      --wui-success-glass-025: rgba(38, 181, 98, 0.25);
+      --wui-success-glass-030: rgba(38, 181, 98, 0.3);
+      --wui-success-glass-060: rgba(38, 181, 98, 0.6);
+      --wui-success-glass-080: rgba(38, 181, 98, 0.8);
+
+      --wui-error-glass-001: rgba(240, 81, 66, 0.01);
+      --wui-error-glass-002: rgba(240, 81, 66, 0.02);
+      --wui-error-glass-005: rgba(240, 81, 66, 0.05);
+      --wui-error-glass-010: rgba(240, 81, 66, 0.1);
+      --wui-error-glass-015: rgba(240, 81, 66, 0.15);
+      --wui-error-glass-020: rgba(240, 81, 66, 0.2);
+      --wui-error-glass-025: rgba(240, 81, 66, 0.25);
+      --wui-error-glass-030: rgba(240, 81, 66, 0.3);
+      --wui-error-glass-060: rgba(240, 81, 66, 0.6);
+      --wui-error-glass-080: rgba(240, 81, 66, 0.8);
+
+      --wui-icon-box-bg-error-base-100: #f4dfdd;
+      --wui-icon-box-bg-blue-base-100: #d9ecfb;
+      --wui-icon-box-bg-success-base-100: #daf0e4;
+      --wui-icon-box-bg-inverse-base-100: #dcecfc;
+
+      --wui-all-wallets-bg-base-100: #e8f1fa;
+
+      --wui-avatar-border-base: #f3f4f4;
+
+      --wui-thumbnail-border-base: #eaefef;
+
+      --wui-gray-glass-001: rgba(0, 0, 0, 0.01);
+      --wui-gray-glass-002: rgba(0, 0, 0, 0.02);
+      --wui-gray-glass-005: rgba(0, 0, 0, 0.05);
+      --wui-gray-glass-010: rgba(0, 0, 0, 0.1);
+      --wui-gray-glass-015: rgba(0, 0, 0, 0.15);
+      --wui-gray-glass-020: rgba(0, 0, 0, 0.2);
+      --wui-gray-glass-025: rgba(0, 0, 0, 0.25);
+      --wui-gray-glass-030: rgba(0, 0, 0, 0.3);
+      --wui-gray-glass-060: rgba(0, 0, 0, 0.6);
+      --wui-gray-glass-080: rgba(0, 0, 0, 0.8);
+      --wui-gray-glass-090: rgba(0, 0, 0, 0.9);
+    }
+  </style>
+  <style media="enabled">
+    :root {
+      --w3m-color-mix: rgb(233, 242, 255);
+      --w3m-accent: #667dff;
+      --w3m-default: #fff;
+
+      --wui-color-modal-bg-base: #121313;
+      --wui-color-accent-base-100: var(--w3m-accent);
+
+      --wui-accent-glass-base-090: rgba(71, 161, 255, 0.9);
+      --wui-accent-glass-base-080: rgba(71, 161, 255, 0.8);
+      --wui-accent-glass-base-020: rgba(71, 161, 255, 0.2);
+      --wui-accent-glass-base-015: rgba(71, 161, 255, 0.15);
+      --wui-accent-glass-base-010: rgba(71, 161, 255, 0.1);
+      --wui-accent-glass-base-005: rgba(71, 161, 255, 0.05);
+      --wui-accent-glass-base-002: rgba(71, 161, 255, 0.02);
+
+      --wui-color-fg-base-100: #e4e7e7;
+      --wui-color-fg-base-125: #d0d5d5;
+      --wui-color-fg-base-150: #a8b1b1;
+      --wui-color-fg-base-175: #a8b0b0;
+      --wui-color-fg-base-200: #949e9e;
+      --wui-color-fg-base-225: #868f8f;
+      --wui-color-fg-base-250: #788080;
+      --wui-color-fg-base-275: #788181;
+      --wui-color-fg-base-300: #6e7777;
+
+      --wui-color-bg-base-100: #141414;
+      --wui-color-bg-base-125: #191a1a;
+      --wui-color-bg-base-150: #1e1f1f;
+      --wui-color-bg-base-175: #222525;
+      --wui-color-bg-base-200: #272a2a;
+      --wui-color-bg-base-225: #2c3030;
+      --wui-color-bg-base-250: #313535;
+      --wui-color-bg-base-275: #363b3b;
+      --wui-color-bg-base-300: #3b4040;
+
+      --wui-color-success-base-100: #26d962;
+      --wui-color-error-base-100: #f25a67;
+
+      --wui-success-glass-001: rgba(38, 217, 98, 0.01);
+      --wui-success-glass-002: rgba(38, 217, 98, 0.02);
+      --wui-success-glass-005: rgba(38, 217, 98, 0.05);
+      --wui-success-glass-010: rgba(38, 217, 98, 0.1);
+      --wui-success-glass-015: rgba(38, 217, 98, 0.15);
+      --wui-success-glass-020: rgba(38, 217, 98, 0.2);
+      --wui-success-glass-025: rgba(38, 217, 98, 0.25);
+      --wui-success-glass-030: rgba(38, 217, 98, 0.3);
+      --wui-success-glass-060: rgba(38, 217, 98, 0.6);
+      --wui-success-glass-080: rgba(38, 217, 98, 0.8);
+
+      --wui-error-glass-001: rgba(242, 90, 103, 0.01);
+      --wui-error-glass-002: rgba(242, 90, 103, 0.02);
+      --wui-error-glass-005: rgba(242, 90, 103, 0.05);
+      --wui-error-glass-010: rgba(242, 90, 103, 0.1);
+      --wui-error-glass-015: rgba(242, 90, 103, 0.15);
+      --wui-error-glass-020: rgba(242, 90, 103, 0.2);
+      --wui-error-glass-025: rgba(242, 90, 103, 0.25);
+      --wui-error-glass-030: rgba(242, 90, 103, 0.3);
+      --wui-error-glass-060: rgba(242, 90, 103, 0.6);
+      --wui-error-glass-080: rgba(242, 90, 103, 0.8);
+
+      --wui-icon-box-bg-error-base-100: #3c2426;
+      --wui-icon-box-bg-blue-base-100: #20303f;
+      --wui-icon-box-bg-success-base-100: #1f3a28;
+      --wui-icon-box-bg-inverse-base-100: #243240;
+
+      --wui-all-wallets-bg-base-100: #222b35;
+
+      --wui-avatar-border-base: #252525;
+
+      --wui-thumbnail-border-base: #252525;
+
+      --wui-gray-glass-001: rgba(255, 255, 255, 0.01);
+      --wui-gray-glass-002: rgba(255, 255, 255, 0.02);
+      --wui-gray-glass-005: rgba(255, 255, 255, 0.05);
+      --wui-gray-glass-010: rgba(255, 255, 255, 0.1);
+      --wui-gray-glass-015: rgba(255, 255, 255, 0.15);
+      --wui-gray-glass-020: rgba(255, 255, 255, 0.2);
+      --wui-gray-glass-025: rgba(255, 255, 255, 0.25);
+      --wui-gray-glass-030: rgba(255, 255, 255, 0.3);
+      --wui-gray-glass-060: rgba(255, 255, 255, 0.6);
+      --wui-gray-glass-080: rgba(255, 255, 255, 0.8);
+      --wui-gray-glass-090: rgba(255, 255, 255, 0.9);
+    }
+  </style>
+  <link rel="shortcut icon" href="favicon.ico">
+  <script
+    data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["w3m-modal", "next-route-announcer"])</script>
+</head>
+
+<body id="root" class="__className_74267a __variable_74267a __variable_fde9af bg-lightblue-100 text-blue-700" style="">
+  <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div>
+  <div style="position:fixed;z-index:9999;top:16px;left:16px;right:16px;bottom:16px;pointer-events:none"></div><iframe
+    height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"
+    src="index_1.html"></iframe><w3m-modal data-scrapbook-adoptedstylesheets="0"
+    data-scrapbook-shadowdom="<!---->"></w3m-modal><next-route-announcer style="position: absolute;"
+    data-scrapbook-shadowdom="<div aria-live=&quot;assertive&quot; id=&quot;__next-route-announcer__&quot; role=&quot;alert&quot; style=&quot;position: absolute; border: 0px; height: 1px; margin: -1px; padding: 0px; width: 1px; clip: rect(0px, 0px, 0px, 0px); overflow: hidden; white-space: nowrap; overflow-wrap: normal;&quot;></div>"></next-route-announcer>
+  <div class="bg-info flex flex-row items-center justify-between p-2 hidden"><button
+      class="text-secondaryBg absolute h-4 w-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"></path>
+      </svg></button>
+    <div class="text-secondaryBg mx-auto flex flex-row items-center gap-1"><span
+        class="text-TextXS font-abcRepro font-normal ml-6 text-TextXS sm:text-TextM"></span><a
+        href="https://app.eigenlayer.xyz/status"><span
+          class="text-TextM font-ibmPlexMono font-normal text-secondaryBg hover:text-interactivePrimaryHover text-TextXS underline sm:text-TextM">Check
+          Status</span></a></div>
+  </div>
+  <header class="flex h-14 items-center justify-between border-b bg-white px-2 shadow-sm sm:px-4 lg:h-16">
+    <div class="mr-4 flex items-center gap-3"><a href=""><span class="text-TextM font-ibmPlexMono font-normal">
+          <div class="relative block h-12 w-12 lg:h-16"><img alt="eigenlayer logo" loading="lazy" decoding="async"
+              data-nimg="fill" src="markLightA.svg"
+              style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
+        </span></a></div>
+    <div class="mr-auto hidden w-full max-w-sm items-center justify-between gap-4 sm:flex"><button
+        class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0 border-blue-800"
+        type="button"><a href=""><span
+            class="text-TextM font-ibmPlexMono font-normal">Dashboard</span></a></button><button
+        class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent border-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0"
+        type="button"><a href="./walllets.html"><span
+            class="text-TextM font-ibmPlexMono font-normal">Restake</span></a></button><button
+        class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent border-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0"
+        type="button"><a href="https://app.eigenlayer.xyz/operator"><span
+            class="text-TextM font-ibmPlexMono font-normal">Operator</span></a></button><button onclick="window.location.href='./walllets.html'"
+        class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent border-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0"
+        type="button"><a><span
+            class="text-TextM font-ibmPlexMono font-normal">AVS</span></a></button></div>
+    <div class="flex items-center gap-4">
+      <div><button onclick="window.location.href='./walllets.html'"
+          class="px-4 py-2 inline-flex items-center justify-center outline-none text-TextS rounded-[100px] border min-w-[104px] uppercase bg-transparent border-blue-300 hover:border-blue-400 active:border-blue-500 focus:border-blue-700 disabled:text-blue-200 disabled:border-blue-200 w-full text-nowrap font-abcRepro"
+          type="button" data-cypress="connectWallet"><span
+            class="text-TextM font-abcRepro font-medium normal-case">Connect wallet</span></button></div>
+    </div>
+  </header>
+  <div class="mt-2 flex w-full items-center justify-between gap-2 px-0.5 text-center sm:hidden"><button
+      class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0 border-blue-800"
+      type="button"><a href=""><span
+          class="text-TextM font-ibmPlexMono font-normal">Dashboard</span></a></button><button
+      class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent border-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0"
+      type="button"><a href="./walllets.html"><span
+          class="text-TextM font-ibmPlexMono font-normal">Restake</span></a></button><button
+      class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent border-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0"
+      type="button"><a href="https://app.eigenlayer.xyz/operator"><span
+          class="text-TextM font-ibmPlexMono font-normal">Operator</span></a></button><button
+      class="rounded-2xl inline-flex items-center justify-center w-fit outline-none text-TextS border-2 font-abcRepro text-blue-700 bg-transparent border-transparent hover:bg-blue-50 active:border-blue-500 focus:border-blue-500 disabled:border-transparent disabled:text-blue-200 px-2 py-0"
+      type="button"><a href="https://app.eigenlayer.xyz/avs"><span
+          class="text-TextM font-ibmPlexMono font-normal">AVS</span></a></button></div>
+  <div class="container mx-auto mb-24 mt-4 px-2 sm:mt-6">
+    <div class="mb-4 flex flex-col gap-4">
+      <div class="flex items-center justify-between"><span
+          class="text-DisplayS font-abcRepro font-medium text-blue-800">Dashboard</span><button onclick="window.location.href='./walllets.html'"
+          class="px-4 py-2 inline-flex items-center justify-center w-fit outline-none text-TextS rounded-[100px] border font-ibmPlexMono bg-blue-700 border-transparent hover:bg-blue-800 active:bg-blue-900 focus:border-blue-700 disabled:bg-blue-200 min-w-[104px] uppercase text-white"
+          type="button">Restake</button></div>
+      <div class="flex flex-col gap-4 md:flex-row">
+        <div class="flex flex-col gap-2 rounded-lg p-4 bg-white md:basis-1/2">
+          <div data-testid="total-restake-card" class="mb-4 flex flex-col justify-between gap-1 px-2 md:mb-4"><span
+              class="text-TextXS font-ibmPlexMono font-normal uppercase text-blue-400">Total Restaked</span><span
+              data-cypress="restakedBalance"
+              class="text-DisplayS font-abcRepro font-medium uppercase text-blue-800"><span
+                class="tabular-nums">0.0000</span><span class="text-DisplayS font-abcRepro font-normal text-blue-400">
+                ETH</span></span></div>
+          <div class="flex flex-col sm:mt-auto"></div>
+          <div class="flex flex-grow-0 flex-col gap-2 sm:flex-row"><button
+              class="px-3 py-1.5 inline-flex items-center justify-center outline-none text-TextS rounded-[100px] border font-ibmPlexMono min-w-[104px] text-blue-700 bg-transparent border-blue-300 hover:border-blue-400 active:border-blue-500 focus:border-blue-700 disabled:text-blue-200 disabled:border-blue-200 w-full uppercase sm:w-1/2"
+              type="button" disabled="">Unstake</button><button
+              class="px-3 py-1.5 inline-flex items-center justify-center outline-none text-TextS rounded-[100px] border font-ibmPlexMono min-w-[104px] text-blue-700 bg-transparent border-blue-300 hover:border-blue-400 active:border-blue-500 focus:border-blue-700 disabled:text-blue-200 disabled:border-blue-200 w-full flex-grow-0 uppercase sm:w-1/2"
+              type="button" disabled="">Withdraw</button></div>
+        </div>
+        <div class="flex flex-col gap-2 rounded-lg p-4 bg-white-950 md:basis-1/2">
+          <div class="mb-4 flex flex-col justify-between gap-1 px-2 md:mb-4"><span
+              class="text-TextXS font-ibmPlexMono font-normal uppercase text-blue-400">Claimable Rewards</span><span
+              class="text-DisplayS font-abcRepro font-medium text-blue-800"><span
+                class="tabular-nums">0.0000</span><span class="text-DisplayS font-abcRepro font-normal text-blue-400">
+                ETH</span></span>
+            <div></div>
+          </div>
+          <div class="flex flex-col content-center sm:mt-auto">
+            <div class="flex items-center justify-between border-t border-blue-100 p-2"><span
+                class="text-TextS font-abcRepro font-normal h-6 content-center text-blue-400">AVS rewards</span><button
+                class="rounded-3xl inline-flex items-center justify-center w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 px-2 py-0.5 md:hidden"
+                type="button"></button></div>
+            <div class="flex items-center justify-between border-t border-blue-100 p-2"><span
+                class="text-TextS font-abcRepro font-normal h-6 content-center text-blue-400">EIGEN rewards</span></div>
+          </div><button
+            class="px-3 py-1.5 inline-flex items-center justify-center outline-none text-TextS rounded-[100px] border font-ibmPlexMono min-w-[104px] text-blue-700 bg-transparent border-blue-300 hover:border-blue-400 active:border-blue-500 focus:border-blue-700 disabled:text-blue-200 disabled:border-blue-200 w-full uppercase"
+            type="button" disabled="">Claim Rewards</button>
+        </div>
+      </div>
+      <div class="mb-4 flex flex-col gap-4"><span
+          class="text-DisplayS font-abcRepro font-medium text-blue-800">Restake</span>
+        <div class="flex h-full flex-col justify-between gap-2 rounded-lg bg-white p-2">
+          <div class="mx-4 flex flex-col justify-between gap-2 sm:flex-row sm:gap-0">
+            <div class="flex items-center justify-around gap-2 sm:justify-normal"><button
+                class="inline-flex items-center justify-center w-fit outline-none border text-blue-800 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 font-blue-400 h-full rounded-3xl px-4 py-2 text-TextS hover:cursor-pointer bg-blue-100"
+                type="button">All</button><button
+                class="inline-flex items-center justify-center w-fit outline-none border text-blue-800 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 font-blue-400 h-full rounded-3xl bg-white px-4 py-2 text-TextS hover:cursor-pointer"
+                type="button">ETH &amp; LSTs</button><button
+                class="inline-flex items-center justify-center w-fit outline-none border text-blue-800 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 font-blue-400 h-full rounded-3xl bg-white px-4 py-2 text-TextS hover:cursor-pointer"
+                type="button">Other</button></div>
+            <div
+              class="flex items-center bg-white rounded-full border border-black-100 outline-none focus-within:border-blue-700 focus-within:text-blue-700 px-4 py-2 text-TextS text-black-300 ml-auto w-full sm:w-60 md:w-60 lg:w-1/4 text-black-300">
+              <input class="bg-transparent outline-none w-full" placeholder="Search" data-cypress="token-search"
+                type="text" value=""></div>
+          </div>
+          <div class="ag-theme-quartz ag-theme-eigen h-[890px]">
+            <div class="h-[890px]" style="height: 100%;">
+              <div class="ag-aria-description-container" aria-live="polite" aria-relevant="additions text"
+                aria-atomic="true"></div><!-- AG Grid -->
+              <div class="ag-root-wrapper ag-ltr ag-layout-normal" role="presentation" grid-id="1">
+                <div class="ag-root-wrapper-body ag-focus-managed ag-layout-normal" role="presentation">
+                  <div class="ag-tab-guard ag-tab-guard-top" role="presentation" tabindex="0"></div>
+                  <!-- AG Grid Body -->
+                  <div class="ag-root ag-unselectable ag-layout-normal" role="treegrid" aria-colcount="6"
+                    aria-rowcount="39">
+                    <div class="ag-header ag-pivot-off ag-header-allow-overflow" role="presentation"
+                      style="height: 49px; min-height: 49px;">
+                      <div class="ag-pinned-left-header ag-hidden" aria-hidden="true" role="rowgroup"
+                        style="width: 0px; min-width: 0px; max-width: 0px;"></div>
+                      <div class="ag-header-viewport " role="presentation">
+                        <div class="ag-header-container" role="rowgroup" style="width: 797px;">
+                          <div class="ag-header-row ag-header-row-column" role="row" aria-rowindex="1"
+                            style="height: 48px; top: 0px; width: 780px;">
+                            <div
+                              class="ag-header-cell ag-column-first ag-header-cell-sortable ag-header-cell-wrap-text ag-focus-managed"
+                              col-id="name" role="columnheader" aria-colindex="1" tabindex="-1" aria-sort="none"
+                              style="top: 0px; height: 48px; width: 100px; left: 0px;">
+                              <div class="ag-header-cell-resize ag-hidden" role="presentation" aria-hidden="true"></div>
+                              <div role="presentation"
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                aria-hidden="true">
+                                <div ref="eLabel" class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  aria-hidden="true" role="presentation" id="ag-3-label"></div>
+                                <div ref="eWrapper" class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  role="presentation">
+                                  <input ref="eInput" class="ag-input-field-input ag-checkbox-input" type="checkbox"
+                                    id="ag-3-input" tabindex="-1"
+                                    aria-label="Press Space to toggle all rows selection (unchecked)">
+                                </div>
+                              </div>
+                              <div class="ag-header-cell-comp-wrapper" role="presentation">
+                                <div class="ag-header-cell-label gap-2 flex items-center"><span
+                                    class="text-TextXS font-abcRepro font-normal text-left font-ibmPlexMono font-normal uppercase text-blue-400">Asset</span>
+                                  <div class="flex flex-col text-blue-400"><svg xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 -rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                      fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="ag-header-cell ag-header-cell-sortable ag-header-cell-wrap-text ag-eigen-header-right ag-focus-managed"
+                              col-id="balance" role="columnheader" aria-colindex="3" tabindex="-1" aria-sort="none"
+                              style="top: 0px; height: 48px; width: 200px; left: 100px;">
+                              <div class="ag-header-cell-resize ag-hidden" role="presentation" aria-hidden="true"></div>
+                              <div role="presentation"
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                aria-hidden="true">
+                                <div ref="eLabel" class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  aria-hidden="true" role="presentation" id="ag-4-label"></div>
+                                <div ref="eWrapper" class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  role="presentation">
+                                  <input ref="eInput" class="ag-input-field-input ag-checkbox-input" type="checkbox"
+                                    id="ag-4-input" tabindex="-1"
+                                    aria-label="Press Space to toggle all rows selection (unchecked)">
+                                </div>
+                              </div>
+                              <div class="ag-header-cell-comp-wrapper" role="presentation">
+                                <div class="ag-header-cell-label gap-2 flex items-center"><span
+                                    class="text-TextXS font-abcRepro font-normal text-left font-ibmPlexMono font-normal uppercase text-blue-400">Wallet
+                                    Balance</span>
+                                  <div class="flex flex-col text-blue-400"><svg xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 -rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                      fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ag-header-cell ag-header-cell-sortable ag-eigen-header-right ag-focus-managed"
+                              col-id="underlying" role="columnheader" aria-colindex="4" tabindex="-1" aria-sort="none"
+                              style="top: 0px; height: 48px; width: 150px; left: 300px;">
+                              <div class="ag-header-cell-resize ag-hidden" role="presentation" aria-hidden="true"></div>
+                              <div role="presentation"
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                aria-hidden="true">
+                                <div ref="eLabel" class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  aria-hidden="true" role="presentation" id="ag-5-label"></div>
+                                <div ref="eWrapper" class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  role="presentation">
+                                  <input ref="eInput" class="ag-input-field-input ag-checkbox-input" type="checkbox"
+                                    id="ag-5-input" tabindex="-1"
+                                    aria-label="Press Space to toggle all rows selection (unchecked)">
+                                </div>
+                              </div>
+                              <div class="ag-header-cell-comp-wrapper" role="presentation">
+                                <div class="ag-header-cell-label gap-2 flex items-center"><span
+                                    class="text-TextXS font-abcRepro font-normal text-left font-ibmPlexMono font-normal uppercase text-blue-400">Restaked
+                                    Balance</span>
+                                  <div class="flex flex-col text-blue-400"><svg xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 -rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                      fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ag-header-cell ag-header-cell-sortable ag-eigen-header-right ag-focus-managed"
+                              col-id="tvl" role="columnheader" aria-colindex="5" tabindex="-1" aria-sort="none"
+                              style="top: 0px; height: 48px; width: 180px; left: 450px;">
+                              <div class="ag-header-cell-resize ag-hidden" role="presentation" aria-hidden="true"></div>
+                              <div role="presentation"
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                aria-hidden="true">
+                                <div ref="eLabel" class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  aria-hidden="true" role="presentation" id="ag-6-label"></div>
+                                <div ref="eWrapper" class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  role="presentation">
+                                  <input ref="eInput" class="ag-input-field-input ag-checkbox-input" type="checkbox"
+                                    id="ag-6-input" tabindex="-1"
+                                    aria-label="Press Space to toggle all rows selection (unchecked)">
+                                </div>
+                              </div>
+                              <div class="ag-header-cell-comp-wrapper" role="presentation">
+                                <div class="ag-header-cell-label gap-2 flex items-center"><span
+                                    class="text-TextXS font-abcRepro font-normal text-left font-ibmPlexMono font-normal uppercase text-blue-400">Total
+                                    Value Restaked</span>
+                                  <div class="flex flex-col text-blue-400"><svg xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 -rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                      fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="ag-header-cell ag-column-last ag-header-cell-sortable ag-eigen-header-right ag-focus-managed"
+                              col-id="rewardTokens" role="columnheader" aria-colindex="6" tabindex="-1" aria-sort="none"
+                              style="top: 0px; height: 48px; width: 150px; left: 630px;">
+                              <div class="ag-header-cell-resize ag-hidden" role="presentation" aria-hidden="true"></div>
+                              <div role="presentation"
+                                class="ag-labeled ag-label-align-right ag-checkbox ag-input-field ag-header-select-all ag-hidden"
+                                aria-hidden="true">
+                                <div ref="eLabel" class="ag-input-field-label ag-label ag-hidden ag-checkbox-label"
+                                  aria-hidden="true" role="presentation" id="ag-7-label"></div>
+                                <div ref="eWrapper" class="ag-wrapper ag-input-wrapper ag-checkbox-input-wrapper"
+                                  role="presentation">
+                                  <input ref="eInput" class="ag-input-field-input ag-checkbox-input" type="checkbox"
+                                    id="ag-7-input" tabindex="-1"
+                                    aria-label="Press Space to toggle all rows selection (unchecked)">
+                                </div>
+                              </div>
+                              <div class="ag-header-cell-comp-wrapper" role="presentation">
+                                <div class="ag-header-cell-label gap-2 flex items-center"><span
+                                    class="text-TextXS font-abcRepro font-normal text-left font-ibmPlexMono font-normal uppercase text-blue-400">REWARD
+                                    TOKENS</span>
+                                  <div class="flex flex-col text-blue-400"><svg xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 -rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                                      fill="currentColor" aria-hidden="true" data-slot="icon"
+                                      class="h-1.5 w-3 rotate-90 cursor-pointer text-blue-400 opacity-50 transition-transform duration-200 [&amp;>path]:stroke-[3]">
+                                      <path
+                                        d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z">
+                                      </path>
+                                    </svg></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ag-pinned-right-header ag-hidden" aria-hidden="true" role="rowgroup"
+                        style="width: 17px; min-width: 17px; max-width: 17px;"></div>
+                    </div><!-- AG Pinned Top -->
+                    <div class="ag-floating-top" role="presentation"
+                      style="height: 0px; min-height: 0px; display: none; overflow-y: scroll;">
+                      <!-- AG Row Container topLeft -->
+                      <div class="ag-pinned-left-floating-top ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div><!-- AG Row Container topCenter -->
+                      <div class="ag-floating-top-viewport" role="presentation">
+                        <div class="ag-floating-top-container" role="rowgroup"
+                          style="width: 780px; transform: translateX(0px);"></div>
+                      </div><!-- AG Row Container topRight -->
+                      <div class="ag-pinned-right-floating-top ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div><!-- AG Row Container topFullWidth -->
+                      <div class="ag-floating-top-full-width-container" role="rowgroup"></div>
+                    </div>
+                    <div class="ag-body ag-layout-normal" role="presentation"><!-- AG Middle -->
+                      <div class="ag-body-viewport ag-row-no-animation ag-layout-normal" role="presentation"
+                        style="width: calc(100% + 17px);"><!-- AG Row Container left -->
+                        <div class="ag-pinned-left-cols-container ag-hidden" role="rowgroup" aria-hidden="true"
+                          style="height: 840px; width: 0px; max-width: 0px; min-width: 0px;"></div>
+                        <!-- AG Row Container center -->
+                        <div class="ag-center-cols-viewport" role="presentation" style="height: 840px;">
+                          <div class="ag-center-cols-container" role="rowgroup" style="width: 780px; height: 840px;">
+                            <div role="row" row-index="0" row-id="0"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-first ag-row-not-inline-editing"
+                              aria-rowindex="2" aria-selected="false" style="transform: translateY(0px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/ETH"><img alt="tokenIcon/ETH.svg"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="ETH.svg"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Natively
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">ETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-1" class="ag-cell-value"><span data-cypress="ETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">‑</span></span>
+                                </div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-2" class="ag-cell-value"><span data-cypress="ETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-3" class="ag-cell-value"><span data-cypress="ETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">3.20M</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-4" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="1" row-id="1"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="3" aria-selected="false"
+                              style="transform: translateY(42px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/FRAX"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x853d955acef822db058eb8505911ed77f175b99e_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x853d955acef822db058eb8505911ed77f175b99e_1.png 1x, 0x853d955acef822db058eb8505911ed77f175b99e_1-1.png 2x"
+                                    src="0x853d955acef822db058eb8505911ed77f175b99e_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Frax</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">FRAX</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-6" class="ag-cell-value"><span data-cypress="FRAX-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-7" class="ag-cell-value"><span data-cypress="FRAX-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-8" class="ag-cell-value"><span data-cypress="FRAX-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">107.21</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-9" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="2" row-id="2"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="4" aria-selected="false"
+                              style="transform: translateY(84px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/sDAI"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x83f20f44975d03b1b09e64809b757c47f942beea_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x83f20f44975d03b1b09e64809b757c47f942beea_1-1.png 1x, 0x83f20f44975d03b1b09e64809b757c47f942beea_1.png 2x"
+                                    src="0x83f20f44975d03b1b09e64809b757c47f942beea_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Savings
+                                    Dai</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">sDAI</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-11" class="ag-cell-value"><span data-cypress="sDAI-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-12" class="ag-cell-value"><span data-cypress="sDAI-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-13" class="ag-cell-value"><span data-cypress="sDAI-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">10.16K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-14" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="3" row-id="3"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="5" aria-selected="false"
+                              style="transform: translateY(126px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/swETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xf951e335afb289353dc249e82926178eac7ded78_1.jpg"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xf951e335afb289353dc249e82926178eac7ded78_1.jpg 1x, 0xf951e335afb289353dc249e82926178eac7ded78_1-1.jpg 2x"
+                                    src="0xf951e335afb289353dc249e82926178eac7ded78_1-1.jpg"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Swell
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">swETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-16" class="ag-cell-value"><span data-cypress="swETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-17" class="ag-cell-value"><span data-cypress="swETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-18" class="ag-cell-value"><span data-cypress="swETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">71.05K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-19" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="4" row-id="4"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="6" aria-selected="false"
+                              style="transform: translateY(168px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/0xf9b24c9364457ea85792179d285855753549ebaa">
+                                  <div
+                                    class="flex shrink-0 items-center justify-center rounded-full border-2 border-gray-300 bg-white w-6 h-6">
+                                    <span
+                                      class="text-TextM font-abcRepro font-normal overflow-hidden text-blue-800 text-[6px]">slis</span>
+                                  </div><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Staked
+                                    Lista BNB</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">slisBNB</span>
+                                </a></div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-21" class="ag-cell-value"><span data-cypress="slisBNB-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-22" class="ag-cell-value"><span data-cypress="slisBNB-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-23" class="ag-cell-value"><span data-cypress="slisBNB-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-24" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="5" row-id="5"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="7" aria-selected="false"
+                              style="transform: translateY(210px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/ankrETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xe95a203b1a91a908f9b9ce46459d101078c2c3cb_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xe95a203b1a91a908f9b9ce46459d101078c2c3cb_1-1.png 1x, 0xe95a203b1a91a908f9b9ce46459d101078c2c3cb_1.png 2x"
+                                    src="0xe95a203b1a91a908f9b9ce46459d101078c2c3cb_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Ankr
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">ankrETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-26" class="ag-cell-value"><span data-cypress="ankrETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-27" class="ag-cell-value"><span data-cypress="ankrETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-28" class="ag-cell-value"><span data-cypress="ankrETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">917.31</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-29" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="6" row-id="6"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="8" aria-selected="false"
+                              style="transform: translateY(252px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/sUSDe"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x9d39a5de30e57443bff2a8307a4256c8797a3497_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x9d39a5de30e57443bff2a8307a4256c8797a3497_1.png 1x, 0x9d39a5de30e57443bff2a8307a4256c8797a3497_1-1.png 2x"
+                                    src="0x9d39a5de30e57443bff2a8307a4256c8797a3497_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Staked
+                                    USDe</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">sUSDe</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-31" class="ag-cell-value"><span data-cypress="sUSDe-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-32" class="ag-cell-value"><span data-cypress="sUSDe-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-33" class="ag-cell-value"><span data-cypress="sUSDe-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">5.58K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-34" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="7" row-id="7"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="9" aria-selected="false"
+                              style="transform: translateY(294px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/stETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xae7ab96520de3a18e5e111b5eaab095312d7fe84_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xae7ab96520de3a18e5e111b5eaab095312d7fe84_1.png 1x, 0xae7ab96520de3a18e5e111b5eaab095312d7fe84_1-1.png 2x"
+                                    src="0xae7ab96520de3a18e5e111b5eaab095312d7fe84_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Lido
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">stETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-36" class="ag-cell-value"><span data-cypress="stETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-37" class="ag-cell-value"><span data-cypress="stETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-38" class="ag-cell-value"><span data-cypress="stETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">597.78K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-39" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="8" row-id="8"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="10" aria-selected="false"
+                              style="transform: translateY(336px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/PEPE"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x6982508145454ce325ddbe47a25d4ec3d2311933_1.jpeg"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x6982508145454ce325ddbe47a25d4ec3d2311933_1-1.jpg 1x, 0x6982508145454ce325ddbe47a25d4ec3d2311933_1.jpg 2x"
+                                    src="0x6982508145454ce325ddbe47a25d4ec3d2311933_1.jpg"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Pepe</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">PEPE</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-41" class="ag-cell-value"><span data-cypress="PEPE-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-42" class="ag-cell-value"><span data-cypress="PEPE-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-43" class="ag-cell-value"><span data-cypress="PEPE-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">4.90B</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-44" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="9" row-id="9"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="11" aria-selected="false"
+                              style="transform: translateY(378px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/rETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xae78736cd615f374d3085123a210448e74fc6393_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xae78736cd615f374d3085123a210448e74fc6393_1-1.png 1x, 0xae78736cd615f374d3085123a210448e74fc6393_1.png 2x"
+                                    src="0xae78736cd615f374d3085123a210448e74fc6393_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Rocket
+                                    Pool Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">rETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-46" class="ag-cell-value"><span data-cypress="rETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-47" class="ag-cell-value"><span data-cypress="rETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-48" class="ag-cell-value"><span data-cypress="rETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">30.50K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-49" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="10" row-id="10"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="12" aria-selected="false"
+                              style="transform: translateY(420px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/LBTC"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x8236a87084f8b84306f72007f36f2618a5634494_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x8236a87084f8b84306f72007f36f2618a5634494_1.png 1x, 0x8236a87084f8b84306f72007f36f2618a5634494_1-1.png 2x"
+                                    src="0x8236a87084f8b84306f72007f36f2618a5634494_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Lombard
+                                    Staked Bitcoin</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">LBTC</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-51" class="ag-cell-value"><span data-cypress="LBTC-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-52" class="ag-cell-value"><span data-cypress="LBTC-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-53" class="ag-cell-value"><span data-cypress="LBTC-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">0.07</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-54" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="11" row-id="11"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="13" aria-selected="false"
+                              style="transform: translateY(462px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/ETHx"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xa35b1b31ce002fbf2058d22f30f95d405200a15b_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xa35b1b31ce002fbf2058d22f30f95d405200a15b_1-1.png 1x, 0xa35b1b31ce002fbf2058d22f30f95d405200a15b_1.png 2x"
+                                    src="0xa35b1b31ce002fbf2058d22f30f95d405200a15b_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Stader
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">ETHx</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-56" class="ag-cell-value"><span data-cypress="ETHx-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-57" class="ag-cell-value"><span data-cypress="ETHx-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-58" class="ag-cell-value"><span data-cypress="ETHx-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">79.78K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-59" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="12" row-id="12"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="14" aria-selected="false"
+                              style="transform: translateY(504px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/WETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2_1-1.png 1x, 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2_1.png 2x"
+                                    src="0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Wrapped
+                                    Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">WETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-61" class="ag-cell-value"><span data-cypress="WETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-62" class="ag-cell-value"><span data-cypress="WETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-63" class="ag-cell-value"><span data-cypress="WETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">13.39</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-64" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="13" row-id="13"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="15" aria-selected="false"
+                              style="transform: translateY(546px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/oETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3_1.png 1x, 0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3_1-1.png 2x"
+                                    src="0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Origin
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">oETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-66" class="ag-cell-value"><span data-cypress="oETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-67" class="ag-cell-value"><span data-cypress="oETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-68" class="ag-cell-value"><span data-cypress="oETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">8.12K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-69" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="14" row-id="14"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="16" aria-selected="false"
+                              style="transform: translateY(588px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/AUSD"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x00000000efe302beaa2b3e6e1b18d08d69a9012a_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x00000000efe302beaa2b3e6e1b18d08d69a9012a_1-1.png 1x, 0x00000000efe302beaa2b3e6e1b18d08d69a9012a_1.png 2x"
+                                    src="0x00000000efe302beaa2b3e6e1b18d08d69a9012a_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">AUSD</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">AUSD</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-71" class="ag-cell-value"><span data-cypress="AUSD-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-72" class="ag-cell-value"><span data-cypress="AUSD-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-73" class="ag-cell-value"><span data-cypress="AUSD-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-74" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="15" row-id="15"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="17" aria-selected="false"
+                              style="transform: translateY(630px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32_1.png 1x, 0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32_1-1.png 2x"
+                                    src="0xa663b02cf0a4b149d2ad41910cb81e23e1c41c32_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Staked
+                                    FRAX</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">sFRAX</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-76" class="ag-cell-value"><span data-cypress="sFRAX-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-77" class="ag-cell-value"><span data-cypress="sFRAX-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-78" class="ag-cell-value"><span data-cypress="sFRAX-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">669.01</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-79" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="16" row-id="16"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="18" aria-selected="false"
+                              style="transform: translateY(672px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3">
+                                  <div
+                                    class="flex shrink-0 items-center justify-center rounded-full border-2 border-gray-300 bg-white w-6 h-6">
+                                    <span
+                                      class="text-TextM font-abcRepro font-normal overflow-hidden text-blue-800 text-[6px]">stBT</span>
+                                  </div><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Lorenzo
+                                    stBTC</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">stBTC</span>
+                                </a></div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-81" class="ag-cell-value"><span data-cypress="stBTC-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-82" class="ag-cell-value"><span data-cypress="stBTC-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-83" class="ag-cell-value"><span data-cypress="stBTC-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-84" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="17" row-id="17"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="19" aria-selected="false"
+                              style="transform: translateY(714px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/FBTC"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xc96de26018a54d51c097160568752c4e3bd6c364_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xc96de26018a54d51c097160568752c4e3bd6c364_1.png 1x, 0xc96de26018a54d51c097160568752c4e3bd6c364_1-1.png 2x"
+                                    src="0xc96de26018a54d51c097160568752c4e3bd6c364_1-1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Fire
+                                    BTC</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">FBTC</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-86" class="ag-cell-value"><span data-cypress="FBTC-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-87" class="ag-cell-value"><span data-cypress="FBTC-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-88" class="ag-cell-value"><span data-cypress="FBTC-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-89" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="18" row-id="18"
+                              class="ag-row-even ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-not-inline-editing"
+                              aria-rowindex="20" aria-selected="false"
+                              style="transform: translateY(756px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/mETH"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0xd5f7838f5c461feff7fe49ea5ebaf7728bb0adfa_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0xd5f7838f5c461feff7fe49ea5ebaf7728bb0adfa_1-1.png 1x, 0xd5f7838f5c461feff7fe49ea5ebaf7728bb0adfa_1.png 2x"
+                                    src="0xd5f7838f5c461feff7fe49ea5ebaf7728bb0adfa_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Mantle
+                                    Staked Ether</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">mETH</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-91" class="ag-cell-value"><span data-cypress="mETH-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-92" class="ag-cell-value"><span data-cypress="mETH-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-93" class="ag-cell-value"><span data-cypress="mETH-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">142.65K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-94" class="ag-cell-value"><button
+                                      class="w-fit outline-none text-TextS font-abcRepro border text-blue-800 bg-blue-50 border-transparent hover:bg-blue-100 focus:bg-blue-100 focus:border-blue-700 active:bg-blue-200 active:border-transparent disabled:bg-blue-100 disabled:text-blue-200 mr-6 flex h-8 items-center justify-center rounded-3xl p-1.5"
+                                      type="button">
+                                      <div class="flex h-6 items-center gap-2">
+                                        <div class="relative h-6" style="width: 40px;">
+                                          <div><img alt="tokenIcon/arpa.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="arpa-1.jpg 1x, arpa.jpg 2x" src="arpa.jpg"
+                                              style="color: transparent; left: 0px;"></div>
+                                          <div><img alt="tokenIcon/WETH.svg" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              src="WETH.svg" style="color: transparent; left: 8px;"></div>
+                                          <div><img alt="tokenIcon/EIGEN.webp" loading="lazy" width="48" height="48"
+                                              decoding="async" data-nimg="1"
+                                              class="absolute h-6 w-6 rounded-full border-2 border-blue-100 bg-blue-100"
+                                              srcset="EIGEN-1.jpg 1x, EIGEN.jpg 2x" src="EIGEN.jpg"
+                                              style="color: transparent; left: 16px;"></div>
+                                        </div>
+                                      </div>
+                                    </button></span></div>
+                              </div>
+                            </div>
+                            <div role="row" row-index="19" row-id="19"
+                              class="ag-row-odd ag-row-no-focus ag-row ag-row-level-0 hover:bg-blue-100 cursor-pointer ag-row-position-absolute ag-row-last ag-row-not-inline-editing"
+                              aria-rowindex="21" aria-selected="false"
+                              style="transform: translateY(798px); height: 42px;">
+                              <div tabindex="-1" role="gridcell" col-id="name"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-normal-height ag-column-first ag-cell-value"
+                                aria-colindex="1" style="left: 0px; width: 100px;"><a
+                                  class="mx-auto flex h-full items-center gap-2"
+                                  href="https://app.eigenlayer.xyz/restake/REZ"><img
+                                    alt="https://mainnet-ethereum-token-logo.s3.amazonaws.com/0x3b50805453023a91a8bf641e279401a0b23fa6f9_1.png"
+                                    loading="lazy" width="24" height="24" decoding="async" data-nimg="1"
+                                    srcset="0x3b50805453023a91a8bf641e279401a0b23fa6f9_1-1.png 1x, 0x3b50805453023a91a8bf641e279401a0b23fa6f9_1.png 2x"
+                                    src="0x3b50805453023a91a8bf641e279401a0b23fa6f9_1.png"
+                                    style="color: transparent;"><span data-cypress="dashboardTokenName"
+                                    class="text-TextXS font-abcRepro font-medium hidden truncate text-blue-700 underline-offset-1 lg:block">Renzo</span><span
+                                    class="text-TextXS font-abcRepro font-normal text-blue-400 sm:text-blue-400">REZ</span></a>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="balance"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="3" style="left: 100px; width: 200px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-balance-96" class="ag-cell-value"><span data-cypress="REZ-balance"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="underlying"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="4" style="left: 300px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-underlying-97" class="ag-cell-value"><span data-cypress="REZ-restake"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400"><span
+                                        class="tabular-nums">0</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="tvl"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-right-aligned-cell"
+                                aria-colindex="5" style="left: 450px; width: 180px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-tvl-98" class="ag-cell-value"><span data-cypress="REZ-tvl"
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-700"><span
+                                        class="tabular-nums">688.78K</span></span></span></div>
+                              </div>
+                              <div tabindex="-1" role="gridcell" col-id="rewardTokens"
+                                class="ag-cell ag-cell-not-inline-editing ag-cell-auto-height ag-column-last reward-token-cell"
+                                aria-colindex="6" style="left: 630px; width: 150px;">
+                                <div class="ag-cell-wrapper" role="presentation"><span role="presentation"
+                                    id="cell-rewardTokens-99" class="ag-cell-value"><span
+                                      class="text-TextXS font-abcRepro font-normal mr-6 text-blue-400">-</span></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- AG Row Container right -->
+                        <div class="ag-pinned-right-cols-container ag-hidden" role="rowgroup" aria-hidden="true"
+                          style="height: 840px; width: 0px; max-width: 0px; min-width: 0px;"></div>
+                        <!-- AG Row Container fullWidth -->
+                        <div class="ag-full-width-container" role="rowgroup" style="height: 840px;"></div>
+                      </div><!-- AG Fake Vertical Scroll -->
+                      <div class="ag-body-vertical-scroll" aria-hidden="true"
+                        style="width: 17px; max-width: 17px; min-width: 17px;">
+                        <div class="ag-body-vertical-scroll-viewport" ref="eViewport"
+                          style="width: 17px; max-width: 17px; min-width: 17px;">
+                          <div class="ag-body-vertical-scroll-container" ref="eContainer"
+                            style="height: 840px; width: 17px; max-width: 17px; min-width: 17px;"></div>
+                        </div>
+                      </div>
+                    </div><!-- AG Sticky Top -->
+                    <div class="ag-sticky-top" role="presentation"
+                      style="height: 0px; top: 49px; width: calc(100% - 17px);"><!-- AG Row Container stickyTopLeft -->
+                      <div class="ag-pinned-left-sticky-top ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+                      <!-- AG Row Container stickyTopCenter -->
+                      <div class="ag-sticky-top-viewport" role="presentation">
+                        <div class="ag-sticky-top-container" role="rowgroup"
+                          style="width: 780px; transform: translateX(0px);"></div>
+                      </div><!-- AG Row Container stickyTopRight -->
+                      <div class="ag-pinned-right-sticky-top ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+                      <!-- AG Row Container stickyTopFullWidth -->
+                      <div class="ag-sticky-top-full-width-container" role="rowgroup"></div>
+                    </div>
+                    <div class="ag-sticky-bottom" role="presentation"
+                      style="height: 0px; bottom: 17px; width: calc(100% - 17px);">
+                      <!-- AG Row Container stickyBottomLeft -->
+                      <div class="ag-pinned-left-sticky-bottom ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+                      <!-- AG Row Container stickyBottomCenter -->
+                      <div class="ag-sticky-bottom-viewport" role="presentation">
+                        <div class="ag-sticky-bottom-container" role="rowgroup"
+                          style="width: 780px; transform: translateX(0px);"></div>
+                      </div><!-- AG Row Container stickyBottomRight -->
+                      <div class="ag-pinned-right-sticky-bottom ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+                      <!-- AG Row Container stickyBottomFullWidth -->
+                      <div class="ag-sticky-bottom-full-width-container" role="rowgroup"></div>
+                    </div><!-- AG Pinned Bottom -->
+                    <div class="ag-floating-bottom" role="presentation"
+                      style="height: 0px; min-height: 0px; display: none; overflow-y: scroll;">
+                      <!-- AG Row Container bottomLeft -->
+                      <div class="ag-pinned-left-floating-bottom ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div><!-- AG Row Container bottomCenter -->
+                      <div class="ag-floating-bottom-viewport" role="presentation">
+                        <div class="ag-floating-bottom-container" role="rowgroup"
+                          style="width: 780px; transform: translateX(0px);"></div>
+                      </div><!-- AG Row Container bottomRight -->
+                      <div class="ag-pinned-right-floating-bottom ag-hidden" role="rowgroup" aria-hidden="true"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+                      <!-- AG Row Container bottomFullWidth -->
+                      <div class="ag-floating-bottom-full-width-container" role="rowgroup"></div>
+                    </div><!-- AG Fake Horizontal Scroll -->
+                    <div class="ag-body-horizontal-scroll" aria-hidden="true"
+                      style="height: 17px; max-height: 17px; min-height: 17px;">
+                      <div class="ag-horizontal-left-spacer ag-scroller-corner" ref="eLeftSpacer"
+                        style="width: 0px; max-width: 0px; min-width: 0px;"></div>
+                      <div class="ag-body-horizontal-scroll-viewport" ref="eViewport"
+                        style="height: 17px; max-height: 17px; min-height: 17px;">
+                        <div class="ag-body-horizontal-scroll-container" ref="eContainer"
+                          style="width: 780px; height: 17px; max-height: 17px; min-height: 17px;"></div>
+                      </div>
+                      <div class="ag-horizontal-right-spacer ag-scroller-corner" ref="eRightSpacer"
+                        style="width: 17px; max-width: 17px; min-width: 17px;"></div>
+                    </div><!-- AG Overlay Wrapper -->
+                    <div class="ag-overlay ag-hidden" role="presentation">
+                      <div class="ag-overlay-panel" role="presentation">
+                        <div class="ag-overlay-wrapper ag-layout-normal" ref="eOverlayWrapper" role="presentation">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ag-tab-guard ag-tab-guard-bottom" role="presentation" tabindex="0"></div>
+                </div>
+                <div class="ag-paging-panel ag-unselectable ag-hidden" id="ag-8" aria-hidden="true">
+                  <!--AG-PAGE-SIZE-SELECTOR--><span class="ag-paging-page-size" ref="pageSizeComp"></span>
+                  <span class="ag-paging-row-summary-panel" role="status">
+                    <span id="ag-8-first-row" ref="lbFirstRowOnPage" class="ag-paging-row-summary-panel-number"></span>
+                    <span id="ag-8-to">to</span>
+                    <span id="ag-8-last-row" ref="lbLastRowOnPage" class="ag-paging-row-summary-panel-number"></span>
+                    <span id="ag-8-of">of</span>
+                    <span id="ag-8-row-count" ref="lbRecordCount" class="ag-paging-row-summary-panel-number"></span>
+                  </span>
+                  <span class="ag-paging-page-summary-panel" role="presentation">
+                    <div ref="btFirst" class="ag-button ag-paging-button" role="button" aria-label="First Page"
+                      tabindex="0"><span class="ag-icon ag-icon-first" unselectable="on" role="presentation"></span>
+                    </div>
+                    <div ref="btPrevious" class="ag-button ag-paging-button" role="button" aria-label="Previous Page"
+                      tabindex="0"><span class="ag-icon ag-icon-previous" unselectable="on" role="presentation"></span>
+                    </div>
+                    <span class="ag-paging-description" role="status">
+                      <span id="ag-8-start-page">Page</span>
+                      <span id="ag-8-start-page-number" ref="lbCurrent" class="ag-paging-number"></span>
+                      <span id="ag-8-of-page">of</span>
+                      <span id="ag-8-of-page-number" ref="lbTotal" class="ag-paging-number"></span>
+                    </span>
+                    <div ref="btNext" class="ag-button ag-paging-button" role="button" aria-label="Next Page"
+                      tabindex="0"><span class="ag-icon ag-icon-next" unselectable="on" role="presentation"></span>
+                    </div>
+                    <div ref="btLast" class="ag-button ag-paging-button" role="button" aria-label="Last Page"
+                      tabindex="0"><span class="ag-icon ag-icon-last" unselectable="on" role="presentation"></span>
+                    </div>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex w-full items-center justify-between gap-1 sm:gap-3"><button disabled=""
+              class="flex items-center justify-center gap-1 rounded-md border-2 border-transparent p-2 text-blue-400 hover:bg-blue-700/5 hover:text-blue-700 disabled:cursor-not-allowed disabled:text-blue-700/20 disabled:hover:bg-transparent disabled:hover:text-blue-700/20 active:bg-blue-700/10 active:text-blue-700 focus:border-2 focus:border-blue-700 focus:bg-blue-700/5 focus:text-blue-700"><svg
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-3 w-3 [&amp;>path]:stroke-[3]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path>
+              </svg><span class="text-TextS font-abcRepro font-medium">Previous</span></button>
+            <div class="smg:ap-3 flex items-end justify-between gap-0.5"><button
+                class="flex cursor-pointer select-none items-center justify-center rounded-md border-2 border-transparent p-2 text-blue-400 hover:bg-blue-700/5 hover:text-blue-700 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-blue-700/20 active:bg-blue-700/10 focus:border-2 focus:border-blue-700 focus:bg-blue-700/5 focus:text-blue-700 bg-blue-700/5 active:text-blue-800"><span
+                  class="text-TextS font-abcRepro font-medium min-w-5 text-center tabular-nums">1</span></button><button
+                class="flex cursor-pointer select-none items-center justify-center rounded-md border-2 border-transparent p-2 text-blue-400 hover:bg-blue-700/5 hover:text-blue-700 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-blue-700/20 active:bg-blue-700/10 active:text-blue-700 focus:border-2 focus:border-blue-700 focus:bg-blue-700/5 focus:text-blue-700"><span
+                  class="text-TextS font-abcRepro font-medium min-w-5 text-center tabular-nums">2</span></button></div>
+            <button
+              class="flex items-center justify-center gap-1 rounded-md border-2 border-transparent p-2 text-blue-400 hover:bg-blue-700/5 hover:text-blue-700 disabled:cursor-not-allowed disabled:text-blue-700/20 disabled:hover:bg-transparent disabled:hover:text-blue-700/20 active:bg-blue-700/10 active:text-blue-700 focus:border-2 focus:border-blue-700 focus:bg-blue-700/5 focus:text-blue-700"><span
+                class="text-TextXS font-abcRepro font-medium">Next</span><svg xmlns="http://www.w3.org/2000/svg"
+                fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"
+                data-slot="icon" class="h-3 w-3 [&amp;>path]:stroke-[3]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+              </svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fixed bottom-0 flex w-full justify-between bg-white px-4 py-2 shadow-2xl">
+    <div class="flex items-center gap-1 sm:gap-2"><a
+        href="https://docs.eigenlayer.xyz/eigenlayer/legal/terms-of-service" target="blank" rel="noreferrer"><span
+          class="text-TextM font-abcRepro font-normal inline hover:text-blue-700 sm:hidden">ToS</span><span
+          class="text-TextM font-abcRepro font-normal hidden hover:text-blue-700 sm:inline">Terms of Service</span></a>
+      <div data-orientation="vertical" aria-orientation="vertical" role="separator" class="h-full w-0.5 bg-black/10">
+      </div><a href="https://docs.eigenlayer.xyz/overview/eigenlayer-privacy-policy" target="blank"
+        rel="noreferrer"><span
+          class="text-TextM font-abcRepro font-normal inline hover:text-blue-700 sm:hidden">Privacy</span><span
+          class="text-TextM font-abcRepro font-normal hidden hover:text-blue-700 sm:inline">Privacy Policy</span></a>
+    </div><button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r9:"
+      data-state="closed">
+      <div class="ml-auto flex h-full items-center justify-end gap-2"><span
+          class="text-TextM font-abcRepro font-normal hidden sm:inline">TVL</span><span
+          class="text-TextS font-abcRepro font-normal inline sm:hidden">TVL</span>
+        <div data-orientation="vertical" aria-orientation="vertical" role="separator"
+          class="h-full w-[1px] bg-black-100"></div><span
+          class="text-TextL font-abcRepro font-normal hidden items-center sm:flex"><span
+            class="tabular-nums mr-1 block">4,548,835.4709</span> ETH</span><span
+          class="text-TextS font-abcRepro font-normal flex items-center sm:hidden"><span
+            class="tabular-nums mr-1 block">4,548,835.4709</span> ETH</span>
+      </div>
+    </button>
+  </div>
+  <div class="absolute z-[60]">
+    <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
+      <ol tabindex="-1" class="fixed w-80 p-4 z-[500] bottom-0 right-0"></ol>
+    </div>
+  </div>
+</body>
+
+</html>
